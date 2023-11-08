@@ -1,6 +1,6 @@
 library(Biobase)
 
-
+#Use this for log2 data
 medcen <- function(f0) {
   f  = sub('.txt','',f0)
   f1 = paste0(f,'.txt')
@@ -15,6 +15,7 @@ medcen <- function(f0) {
   write.csv(medcen,f2)
 }
 
+#Use this for unlogged data
 medcenu <- function(f0) {
   f  = sub('.txt','',f0)
   f1 = paste0(f,'.txt')
@@ -26,23 +27,4 @@ medcenu <- function(f0) {
   sweep(data,med,MARGIN=1,"/")->medcen
   cbind(round(medcen,3),med,mean)->medcen
   write.csv(medcen,f2)
-}
-
-
-#first make sure your data is 
-#ars3 <- ars2[,-1]
-#rownames(ars3) <- ars2[,1]
-
-normcen <- function(f0, i0=1, j0=1079) {
-  f  = sub('.txt','',f0)
-  f1 = paste0(f,'.txt')
-  f2 = paste0(f,'_normcen.csv')
-  round(read.table(f1),3)->data
-  round(2^data,3)->unlog
-  unlog[unlog==1]<-0.01
-  round(rowMedians(as.matrix(unlog[,i0:j0])),3)->med
-  round(rowMeans(unlog),3)->mean
-  sweep(unlog,med,MARGIN=1,"/")->normcen
-  cbind(round(normcen,3),med,mean)->normcen
-  write.csv(normcen,f2)
 }
