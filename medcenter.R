@@ -1,5 +1,6 @@
 library(Biobase)
 
+#Make sure your data is simply gene names in column 1 and sample names in row 1, all else are gene expression values
 #Use this for log2 data
 medcen <- function(f0) {
   f  = sub('.txt','',f0)
