@@ -6,7 +6,7 @@
   
      2. moduk - same as moduh, but uses number of clusters to cut the tree, with a default k=5. Example usage: moduk("data",k0=10)
   
-     3. modureh - input a [data]_Spear.txt file generated from moduh/moduk, to recut the tree using a different height. Since creation of the _Spear.txt file is the longest step, this saves having to regenerate it every time. Example usage: modureh("data_Spear")
+     3. modureh - input a [data]_rank_Dist_Output.txt file generated from moduh/moduk, to recut the tree using a different height. Since creation of the Dist file is the longest step, this saves having to regenerate it every time. Example usage: modureh("data"). Leave out the "'_rank_Dist_Output.txt"
   
      4. modurek - same as modureh, but uses number of clusters to cut the tree.
 
