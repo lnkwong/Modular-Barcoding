@@ -2,13 +2,13 @@
 
 Use module_chooser.r to generate modules from any dataset. There are 4 functions provided:
 
-  moduh - this will create modules, using height to cut the tree, with a default h=0.8. h0 can be used to change the height. Example usage: moduh("data",h0=0.85)
+     moduh - this will create modules, using height to cut the tree, with a default h=0.8. h0 can be used to change the height. Example usage: moduh("data",h0=0.85)
   
-  moduk - same as moduh, but uses number of clusters to cut the tree, with a default k=5. Example usage: moduk("data",k0=10)
+     moduk - same as moduh, but uses number of clusters to cut the tree, with a default k=5. Example usage: moduk("data",k0=10)
   
-  modureh - input a data_Spear.txt file generated from moduh/moduk, to recut the tree using a different height. Since creation of the _Spear.txt file is the longest step, this saves having to regenerate it every time. Example usage: modureh("data_Spear")
+     modureh - input a data_Spear.txt file generated from moduh/moduk, to recut the tree using a different height. Since creation of the _Spear.txt file is the longest step, this saves having to regenerate it every time. Example usage: modureh("data_Spear")
   
-  modurek - same as modureh, but uses number of clusters to cut the tree.
+     modurek - same as modureh, but uses number of clusters to cut the tree.
 
 Use medcenter.r to generate a median-centered, unlogged output essentially reflecting fold-change values around the median. The output will also list the median and mean values across all samples at the rightmost columns.
 
