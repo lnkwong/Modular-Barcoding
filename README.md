@@ -10,12 +10,12 @@
   
      4. modurek - same as modureh, but uses number of clusters to cut the tree.
 
-2. Use medcenter.r to generate a median-centered, unlogged output essentially reflecting fold-change values around the median. The output will also list the median and mean values across all samples at the rightmost columns. There are 2 functions provided:
+2. Use medcenter.r to generate a median-centered, unlogged output reflecting fold-change values around the median. The output will also list the median and mean values across all samples at the rightmost columns. There are 2 functions provided:
 
      1. medcen - use this on log2 data. Example usage: medcen("data"). Leave out the ".txt"
 
      2. medcenu - use this on unlogged data
 
-4. Use itm.r to generate a data matrix containing 3 types of information: 1) the median-centered data, 2) the "collapsed" values for each module, and 3) the correlation of each gene to the collapsed value of each module. The input data must have the module annotation for each gene in the second column. See itm_manual.pdf for further details.
+4. Use module_corr.r to generate a data matrix containing 3 types of information: 1) the median-centered data, 2) the "collapsed" values for each module, and 3) the correlation of each gene to the collapsed value of each module. The input data must have the module annotation for each gene in the second column. See module_corr_usage.pdf for further details.
 
 5. Use Heatmap macros.xlsm within Excel to automatically color cells based on the fold-change, either unlogged or log2. Use Alt-F11 to select and run a macro.
