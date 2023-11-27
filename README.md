@@ -2,7 +2,7 @@
 
 1. Use module_chooser.r to generate modules from any dataset. There are 4 functions provided:
 
-     1. moduh - this will create modules, using height to cut the tree, with a default h=0.8. h0 can be used to change the height. Example usage: moduh("data",h0=0.85)
+     1. moduh - this will create modules, using height to cut the tree, with a default h=0.8. h0 can be used to change the height. Example usage: moduh("data",h0=0.85). Leave out the ".txt".
   
      2. moduk - same as moduh, but uses number of clusters to cut the tree, with a default k=5. Example usage: moduk("data",k0=10)
   
