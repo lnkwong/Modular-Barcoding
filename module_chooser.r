@@ -39,9 +39,9 @@ write.table(sta0dac,f4,sep="\t") #output file 2
 sta0dad<-as.dendrogram(sta0da)
 
 #generate dendrogram to see node height
-#png(file=f5) #output file 1
-#plot(sta0da,hang=-1)
-#dev.off()
+png(file=f5) #output file 1
+plot(sta0da,hang=-1)
+dev.off()
 
 #generate heatmap
 png(file=f6) #output file 3
