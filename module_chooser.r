@@ -10,9 +10,9 @@ f  = sub('.txt','',f0)
 f1 = paste0(f,'.txt')
 f2 = paste0(f,'_Spear.txt')
 f3 = paste0(f,'_rank_Dist_Output.txt')
-f4 = paste0(f,'_h_0.95_',h0,'.txt')
-f5 = paste0(f,'_h_rank_0.95_',h0,'.png')
-f6 = paste0(f,'_h_heatmap_0.95','.png')
+f4 = paste0(f,'_h_',h0,'.txt')
+f5 = paste0(f,'_h_rank_',h0,'.png')
+f6 = paste0(f,'_h_heatmap','.png')
 
 table <- read.table(f1, header=TRUE, sep="\t",
                     row.names=1, stringsAsFactors=FALSE, comment.char="", check.names=FALSE)
@@ -54,9 +54,9 @@ moduk <- function(f0, k0 = 5) {
   f1 = paste0(f,'.txt')
   f2 = paste0(f,'_Spear.txt')
   f3 = paste0(f,'_rank_Dist_Output.txt')
-  f4 = paste0(f,'_k_0.95_',k0,'.txt')
-  f5 = paste0(f,'_k_rank_0.95_',k0,'.png')
-  f6 = paste0(f,'_k_heatmap_0.95_','.png')
+  f4 = paste0(f,'_k_',k0,'.txt')
+  f5 = paste0(f,'_k_rank_',k0,'.png')
+  f6 = paste0(f,'_k_heatmap_','.png')
   
   table <- read.table(f1, header=TRUE, sep="\t",
                       row.names=1, stringsAsFactors=FALSE, comment.char="", check.names=FALSE)
